@@ -1,0 +1,26 @@
+Battleship game
+
+10 * 10 board
+
+2 player game
+
+each player has:
+- 4x 1u ships
+- 3x 2u ships
+- 2x 3u ships
+- 1x 4u ship
+
+At the start of the game each player must choose the location for each of the ships. Each ship must be at least 1 unit apart from  the other ships in all directions. The player can rotate the ship and choose its x and y coordinates using mouse input.
+
+
+SHORTCUTS:
+- F1 *or* h 	--> HELP.- shows all available shortcuts.
+- s 		--> HOST GAME.- creates a server in host's computer.
+- j 		--> JOIN GAME.- asks for host's socket and attempts to connect.
+- q 		--> QUIT or END SERVER .- ends server or exits out of server.
+- [ENTER]	--> READY .- sends message to opponent, giving him/her the next turn.
+
+communication protocol:
+0 --> TURN.- args: 0 for player1, 1 for player2
+1 --> CHECK.- args: x and y coordinates
+2 --> CHECK RESPONSE.- args: index, x, y, heading, indexPlayer, and dead cells.
